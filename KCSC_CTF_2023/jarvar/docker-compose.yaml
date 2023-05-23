@@ -1,0 +1,25 @@
+version: '3.0'
+services:
+  web:
+    build: ./
+    restart: always
+    networks:
+      - internal_network
+  nginx:
+    image: nginx:1.23
+    ports:
+      - "0.0.0.0:1337:80"
+    restart: always
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - internal_network
+      - out_network
+networks:
+  internal_network:
+    internal: true
+    ipam:
+      driver: default
+  out_network:
+    ipam:
+      driver: default
